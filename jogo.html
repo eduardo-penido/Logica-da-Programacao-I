@@ -1,0 +1,84 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+
+	}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+	}
+
+	function decide(){
+		if(decisao == "S"){
+				alert("Muito bem, vamos lá. Você terá 5 chances");
+				dicas();
+		}
+		if(decisao == "N"){
+				alert("Ok. Nos vemos na próxima");	
+		}
+	}
+
+	var tentativas = 1;
+
+	function dicas(){
+		while( tentativas <= 5){
+			if(palpite < numeroPensado){
+				palpite = parseInt(prompt(tentativas + "ª tentativa: O número escolhido por " + nomeEscolhedor + " é MAIOR do que o seu palpite. Tente um novo palpite"));
+				tentativas++;
+				dicas();
+			}
+
+			if(palpite > numeroPensado){
+				palpite = parseInt(prompt(tentativas + "ª tentativa: O número que " + nomeEscolhedor + " escolheu é MENOR do que o seu palpite. Tente novamente"));
+				tentativas++;
+				dicas();
+			}
+			
+			
+			if(palpite == numeroPensado){
+				mostra("Muito bem, " + nomeAdivinhador + ", você acertou!");
+				mostra("O número escolhido por " + nomeEscolhedor + " foi " + numeroPensado);
+			break; // ou tentativas = 5;
+			}		
+
+		}
+	}
+
+	alert("Olá. Vamos fazer um jogo de adivinhação. Para isso, precisaremos de dois jogadores")
+
+	var nomeEscolhedor = prompt("1º jogador, por favor, digite seu nome");
+	var numeroPensado = parseInt(prompt(nomeEscolhedor + ", digite um número de 0 a 100, mas não deixe que o outro jogador veja"));
+
+	alert("Obrigado, " + nomeEscolhedor + ". Agora é a vez do outro jogador")
+
+	var nomeAdivinhador = prompt("2º jogador, por favor, digite seu nome");
+
+	alert(nomeAdivinhador + ", você deverá adivinhar qual foi o número entre 0 e 100 que " + nomeEscolhedor + " escolheu. Ok?");
+
+	var palpite = parseInt(prompt("Digite o seu palpite"));
+
+//console.log(numeroPensado);
+//Esta função exibe o número pensado no log do browser. Pode ser útil para testar o funcionamento de variáveis randômicas.
+
+	if(palpite == numeroPensado){
+		mostra("Parabéns, " + nomeAdivinhador + ", você acertou!");
+	} else {
+		alert(nomeAdivinhador + ", infelizmente você errou");
+
+		var decisao = prompt("Você gostaria de continuar o jogo usando minhas dicas? Digite S ou N");
+			decide();
+			}
+			if(decisao != "S" && decisao != "N"){
+				decisao = prompt("Resposta inválida. Por favor, digite S ou N");
+				decide();
+			}
+	
+
+</script>

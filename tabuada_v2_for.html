@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+
+	}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+	}
+
+alert("Vamos estudar tabuadas");
+
+var tabuada = parseInt(prompt("Digite um número de 1 a 10"));
+
+while( isNaN(tabuada) ) {
+    tabuada = parseInt(prompt("Digite um número de 1 a 10"));    
+}
+
+for(var multiplicador = 1; multiplicador <=10; multiplicador++ ){
+  		mostra(multiplicador + " X " + tabuada + " = " + (multiplicador * tabuada));
+}
+
+
+mostra("FIM");
+
+</script>

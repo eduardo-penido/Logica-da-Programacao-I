@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+
+	}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+	}
+
+var contador = 20;
+
+alert("Vou te mostrar todos os números entre 20 e 0, na ordem decrescente");
+
+while(contador >= 0){
+	mostra(contador);
+	contador = contador - 1;
+}
+
+mostra("FIM");
+
+</script>

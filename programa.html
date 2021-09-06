@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+
+<script>
+	alert("Vamos fazer umas contas");
+</script>
+
+<h1>Calculando a média das idades das pessoas desta casa.</h1>
+
+<script>
+
+	function pulaLinha(){
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var ano = 2020;
+	var idadeEduardo = ano - 1983;
+	var idadeCarolina = ano - 1988;
+	var idadeBia = ano - 2008;
+	var somaIdades = idadeEduardo + idadeCarolina + idadeBia;
+	var mediaIdades = somaIdades / 3;
+	
+	mostra("Eduardo tem " + idadeEduardo + " anos,");
+	mostra("Carolina tem " + idadeCarolina + " anos e");
+	mostra("Bia tem " + idadeBia + " anos.");
+	pulaLinha();
+	mostra("A média das idades das pessoas desta casa é " + mediaIdades + " anos.");
+	pulaLinha();
+	pulaLinha();
+
+	ano = 2021;
+	idadeEduardo = ano - 1983;
+	idadeCarolina = ano - 1988;
+	idadeBia = ano - 2008;
+	somaIdades = idadeEduardo + idadeCarolina + idadeBia;
+	mediaIdades = somaIdades / 3;
+
+	mostra("Em " + ano + ":");
+	mostra("Eduardo terá " + idadeEduardo + " anos,");
+	mostra("Carolina terá " + idadeCarolina + " anos e");
+	mostra("Bia terá " + idadeBia + " anos.");
+	pulaLinha();
+	mostra("A média das idades das pessoas desta casa será " + mediaIdades + " anos.");
+
+
+
+</script>
